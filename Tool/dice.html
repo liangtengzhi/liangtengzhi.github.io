@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D骰子-猫猫工具集</title>
+    <link rel="icon" type="image/svg+xml" href="../PNG/zhou_zen.ico">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/auth.js"></script>
+    <script src="../JS/dice.js" defer></script>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+			    <a href="https://www.bilibili.com/video/BV1Bfjq6LEDi" target="_blank" style="text-decoration: none; color: inherit;">喵呜~</a>
+			</div>
+            <nav class="nav-links">
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content" role="main">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">🎲 3D骰子</h1>
+                <p class="page-sub">BUG++ QwQ</p>
+            </div>
+            <div class="dice-3d-area">
+                <div class="dice-3d-wrapper" id="diceWrapper">
+                    <div class="dice-3d" id="diceCube">
+                        <div class="face face-front">⚀</div>
+                        <div class="face face-back">⚅</div>
+                        <div class="face face-right">⚁</div>
+                        <div class="face face-left">⚄</div>
+                        <div class="face face-top">⚂</div>
+                        <div class="face face-bottom">⚃</div>
+                    </div>
+                </div>
+                <button id="rollBtn3D" class="dice-btn">掷骰子</button>
+                <p id="resultDisplay" class="dice-result-text">点击掷骰子</p>
+                <p id="historyDisplay" class="dice-history"></p>
+            </div>
+            <div class="footer-note">
+                <span>—— 试试手气喵? ——</span>
+            </div>
+        </div>
+    </div>
+    <footer class="bottom-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 喵喵,版权所有:lmaz & zhouzen</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            if(typeof requireLogin==='function'){
+                requireLogin();
+            }
+        });
+    </script>
+</body>
+</html>
