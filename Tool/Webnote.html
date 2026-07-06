@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板-猫猫工具集</title>
+    <link rel="icon" type="image/svg+xml" href="../PNG/zhou_zen.ico">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/auth.js"></script>
+    <script src="../JS/Webnote.js"></script>
+</head>
+<body onload="init()">
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+			    <a href="https://www.bilibili.com/video/BV1Bfjq6LEDi" target="_blank" style="text-decoration: none; color: inherit;">喵呜~</a>
+			</div>
+            <nav class="nav-links">
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content" role="main">
+        <div class="container">
+            <div class="form-container">
+                <h2>留言板 <small>也算作聊天板喵?</small></h2>
+                <table>
+                    <tr>
+                        <td><label for="memo">留言</label></td>
+                        <td><textarea name="memo" id="memo" cols="50" rows="5" placeholder="说点什么吧…"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="button" value="提交留言" onclick="saveData()" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-wrapper">
+                <table id="datatable"></table>
+                <p id="msg"></p>
+            </div>
+        </div>
+    </div>
+    <footer class="bottom-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 喵喵,版权所有:lmaz & zhouzen</p>
+        </div>
+    </footer>
+</body>
+</html>

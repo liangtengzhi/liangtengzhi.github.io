@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>天气查询-猫猫工具集</title>
+    <meta name="author" content="zhouzen">
+    <meta name="copyright" content="版权所有,zhouzen">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="天气查询, 预报" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../PNG/zhou_zen.ico">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/weather.js"></script>
+    <script src="../JS/auth.js"></script>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+			    <a href="https://www.bilibili.com/video/BV1Bfjq6LEDi" target="_blank" style="text-decoration: none; color: inherit;">喵呜~</a>
+			</div>
+            <nav class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content" role="main">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">☁️ 天气预报</h1>
+                <p class="page-sub">选择日期，查看逐小时天气</p>
+            </div>
+            <div class="weather-search">
+                <input type="text" id="cityInput" placeholder="输入城市名，如 石家庄" />
+                <input type="date" id="datePicker" />
+                <button onclick="manualSearch()">查天气</button>
+                <button onclick="autoLocate()" class="btn-secondary">📍 重新定位</button>
+            </div>
+            <div id="weatherResult" class="weather-result">
+                <p style="color: #b0a8a0; text-align: center; padding: 20px 0;">加载中…</p>
+            </div>
+            <div class="footer-note">
+                <span>—— 数据来自 wttr.in ——</span>
+            </div>
+        </div>
+    </div>
+    <footer class="bottom-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 喵喵,版权所有:lmaz & zhouzen</p>
+        </div>
+    </footer>
+    <script>
+	    document.addEventListener('DOMContentLoaded',function(){
+	        if(typeof requireLogin==='function'){
+	            requireLogin();
+	        }
+	    });
+	</script>
+</body>
+</html>

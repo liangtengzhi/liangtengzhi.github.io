@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>画板-猫猫工具集</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../PNG/zhou_zen.ico">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/draw.js" defer></script>
+    <script src="../JS/auth.js"></script>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+			    <a href="https://www.bilibili.com/video/BV1Bfjq6LEDi" target="_blank" style="text-decoration: none; color: inherit;">喵呜~</a>
+			</div>
+            <nav class="nav-links">
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content" role="main">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">画板</h1>
+                <p class="page-sub">自由涂鸦</p>
+            </div>
+
+            <div class="draw-toolbar">
+                <div class="draw-colors">
+                    <button class="color-btn active" data-color="#000000" style="background:#000000;"></button>
+                    <button class="color-btn" data-color="#e74c3c" style="background:#e74c3c;"></button>
+                    <button class="color-btn" data-color="#3498db" style="background:#3498db;"></button>
+                    <button class="color-btn" data-color="#2ecc71" style="background:#2ecc71;"></button>
+                    <button class="color-btn" data-color="#f1c40f" style="background:#f1c40f;"></button>
+                    <button class="color-btn" data-color="#9b59b6" style="background:#9b59b6;"></button>
+                    <button class="color-btn" data-color="#e67e22" style="background:#e67e22;"></button>
+                    <button class="color-btn" data-color="#ffffff" style="background:#ffffff; border:2px solid #ccc;"></button>
+                </div>
+                <div class="draw-sizes">
+                    <label>粗细：</label>
+                    <input type="range" id="brushSize" min="1" max="20" value="3">
+                    <span id="sizeDisplay">3</span>
+                </div>
+                <div class="draw-actions">
+                    <button id="clearCanvas" class="draw-btn">🗑️ 清空</button>
+                    <button id="saveCanvas" class="draw-btn">💾 保存</button>
+                </div>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="drawCanvas" width="800" height="500"></canvas>
+            </div>
+
+            <div class="footer-note">
+                <span>—— 画着玩 ——</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bottom-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 · 喵喵 · 由 lmaz & zhouzen</p>
+        </div>
+    </footer>
+</body>
+</html>

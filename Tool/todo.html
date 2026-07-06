@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办清单-猫猫工具集</title>
+    <link rel="icon" type="image/svg+xml" href="../PNG/zhou_zen.ico">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/auth.js"></script>
+    <script src="../JS/todo.js" defer></script>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+			    <a href="https://www.bilibili.com/video/BV1Bfjq6LEDi" target="_blank" style="text-decoration: none; color: inherit;">喵呜~</a>
+			</div>
+            <nav class="nav-links">
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content" role="main">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">☐ 待办清单</h1>
+                <p class="page-sub">To-Do list!</p>
+            </div>
+            <div class="todo-input-area">
+                <input type="text" id="todoInput" placeholder="输入待办事项…" />
+                <button id="addBtn">添加</button>
+            </div>
+            <div class="todo-filter">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="active">未完成</button>
+                <button class="filter-btn" data-filter="completed">已完成</button>
+                <span class="todo-count" id="todoCount">0 项</span>
+            </div>
+            <ul id="todoList" class="todo-list"></ul>
+            <div class="footer-note">
+                <span>—— 今日事今日毕喵(当然你要是长期计划就当猫猫没说喵) ——</span>
+            </div>
+        </div>
+    </div>
+    <footer class="bottom-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 喵喵,版权所有:lmaz & zhouzen</p>
+        </div>
+    </footer>
+</body>
+</html>
