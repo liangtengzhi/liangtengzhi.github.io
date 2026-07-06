@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="版权所有:lmaz & zhouzen">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫猫-工具集</title>
+    <link rel="icon" type="image/svg+xml" href="PNG/zhou_zen.ico">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/auth.js"></script>
+    <script src="JS/index.js" defer></script>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+			    <a href="https://www.bilibili.com/video/BV1Bfjq6LEDi" target="_blank" style="text-decoration: none; color: inherit;">喵呜~</a>
+			</div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">首页</a>
+                <a href="about.html">关于</a>
+                <span id="userDisplay" class="nav-user"></span>
+                <button id="loginBtn" class="nav-auth-btn">登录</button>
+                <button id="logoutBtn" class="nav-auth-btn" style="display:none;">登出</button>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content" role="main">
+        <div id="userPanel" class="container">
+            <div class="page-header">
+                <h1 class="page-title">工具箱喵</h1>
+                <p class="page-sub">工具? BUG喵!</p>
+            </div>
+            <div class="tool-group">
+                <div class="group-label">记录类</div>
+                <div class="tools-row">
+                    <div class="tool-card card-main">
+                        <div class="card-inner">
+                            <div class="tool-icon">✎</div>
+                            <h3 class="tool-name">留言板</h3>
+                            <p class="tool-desc">也算作聊天板喵?</p>
+                            <a href="Tool/Webnote.html" class="tool-link" target="_blank">去看看</a>
+                        </div>
+                    </div>
+                    <div class="tool-card card-side">
+                        <div class="card-inner">
+                            <div class="tool-icon">❧</div>
+                            <h3 class="tool-name">画板</h3>
+                            <p class="tool-desc">这也能算是画板喵?也就算涂鸦吧喵!(哈气)</p>
+                            <a href="Tool/draw.html" class="tool-link" target="_blank">去看看</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-group">
+                <div class="group-label">日常类</div>
+                <div class="tools-row">
+                    <div class="tool-card card-main">
+                        <div class="card-inner">
+                            <div class="tool-icon">☐</div>
+                            <h3 class="tool-name">待办清单</h3>
+                            <p class="tool-desc">To-Do list!</p>
+                            <a href="Tool/todo.html" class="tool-link" target="_blank">去看看</a>
+                        </div>
+                    </div>
+                    <div class="tool-card card-side">
+                        <div class="card-inner">
+                            <div class="tool-icon">◈</div>
+                            <h3 class="tool-name">运势</h3>
+                            <p class="tool-desc">今日你的命运如何呢喵?</p>
+                            <a href="Tool/luck.html" class="tool-link" target="_blank">去看看</a>
+                        </div>
+                    </div>
+                    <div class="tool-card card-small">
+                        <div class="card-inner">
+                            <div class="tool-icon">☁</div>
+                            <h3 class="tool-name">天气</h3>
+                            <p class="tool-desc">BUG++ QwQ</p>
+                            <a href="Tool/weather.html" class="tool-link" target="_blank">去看看</a>
+                        </div>
+                    </div>
+                    <div class="tool-card card-small">
+                        <div class="card-inner">
+                            <div class="tool-icon">🎲</div>
+                            <h3 class="tool-name">3D骰子</h3>
+                            <p class="tool-desc">BUG++ QwQ</p>
+                            <a href="Tool/dice.html" class="tool-link" target="_blank">去看看</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-note">
+                <span>—— 建设中.ing 喵 ——</span>
+            </div>
+        </div>
+        <div id="adminPanel" class="container" style="display:none;">
+            <div class="page-header">
+                <h1 class="page-title">🔧 管理面板</h1>
+                <p class="page-sub">管理员喵 · 用户管理 · 留言板管理</p>
+            </div>
+            <div class="admin-section">
+                <h2 class="admin-section-title">👤 用户管理</h2>
+                <div id="userListContainer">
+                    <table id="userTable" class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>用户名</th>
+                                <th>新用户名</th>
+                                <th>新密码</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody"></tbody>
+                    </table>
+                </div>
+                <button id="refreshUserListBtn" class="admin-btn">刷新列表</button>
+            </div>
+            <div class="admin-section">
+                <h2 class="admin-section-title">留言板管理</h2>
+                <p class="admin-desc">管理所有留言，包括删除任意留言喵</p>
+                <a href="Tool/Webnote.html" class="admin-link-btn" target="_blank">进入留言板管理</a>
+            </div>
+            <div class="footer-note">
+                <span>—— 管理员专用喵 ——</span>
+            </div>
+        </div>
+    </div>
+    <div id="authModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h2 id="authTitle">登录</h2>
+            <form id="authForm">
+                <input type="text" id="authUsername" placeholder="用户名" />
+                <input type="password" id="authPassword" placeholder="密码" />
+                <button type="submit" id="authSubmit">登录</button>
+                <p id="authMessage" style="color: #b05a4a; margin-top:10px;"></p>
+                <p>
+                    <span id="authSwitchText">还没有账号？</span>
+                    <a href="#" id="authSwitch">注册</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <footer class="bottom-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 喵喵,版权所有:lmaz & zhouzen</p>
+        </div>
+    </footer>
+</body>
+</html>
